@@ -1,0 +1,8 @@
+@use "./partials/variables" as *;
+@use "./partials/mixins" as *;
+
+header {
+  color: $header-text;
+  background-color: $header-background;
+  @include center();
+}
