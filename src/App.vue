@@ -1,19 +1,25 @@
 <script>
+import AppHeader from "./components/AppHeader.vue";
+import AppMain from "./components/AppMain.vue";
+import AppFooter from "./components/AppFooter.vue";
+
 export default {
   data() {
     return {
       title: "Boolando",
     };
   },
+
+  components: { AppHeader, AppMain, AppFooter },
 };
 </script>
 
 <template>
-  <header></header>
+  <AppHeader></AppHeader>
 
-  <main></main>
+  <AppMain></AppMain>
 
-  <footer></footer>
+  <AppFooter></AppFooter>
 </template>
 
 <style></style>
