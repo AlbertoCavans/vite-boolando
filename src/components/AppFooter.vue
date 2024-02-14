@@ -48,6 +48,11 @@ export default {
     <div class="container">
       <div v-for="footerOption in footerOptions">
         <h4>{{ footerOption.title }}</h4>
+        <ul>
+          <li v-for="link in footerOption.links">
+            <a :href="link.url">{{ link.name }}</a>
+          </li>
+        </ul>
       </div>
 
       <!--       <div class="legal-section">
