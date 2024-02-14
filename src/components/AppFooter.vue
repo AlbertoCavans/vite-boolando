@@ -1,16 +1,61 @@
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      footerOptions: [
+        {
+          title: "Boolando s.r.l.",
+          links: [
+            {
+              name: "Informazioni legali",
+              url: "#",
+            },
+            {
+              name: "Informazioni sulla privacy",
+              url: "#",
+            },
+            {
+              name: "Diritto di recesso",
+              url: "#",
+            },
+          ],
+        },
+        {
+          title: "Trovaci anche su",
+          links: [
+            {
+              name: "Icon 1",
+              url: "#",
+            },
+            {
+              name: "Icon 2",
+              url: "#",
+            },
+            {
+              name: "Icon 3",
+              url: "#",
+            },
+          ],
+        },
+      ],
+    };
+  },
+};
 </script>
 
 <template>
   <footer>
     <div class="container">
-      <div class="legal-section">
+      <div v-for="footerOption in footerOptions">
+        <h4>{{ footerOption.title }}</h4>
+      </div>
+
+      <!--       <div class="legal-section">
         <ul>
           Boolando s.r.l.
-          <li>Informazioni legali</li>
-          <li>Informazioni sulla privacy</li>
-          <li>Diritto di recesso</li>
+          <li></li>
+          <li></li>
+          <li></li>
         </ul>
       </div>
       <div class="socials">
@@ -22,7 +67,7 @@ export default {};
           <li></li>
           <li></li>
         </ul>
-      </div>
+      </div> -->
     </div>
   </footer>
 </template>
