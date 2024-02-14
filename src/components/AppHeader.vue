@@ -2,7 +2,7 @@
 export default {
   data() {
     return {
-      links: [
+      headerLinks: [
         {
           text: "Uomo",
           url: "#",
@@ -29,9 +29,9 @@ export default {
     <div class="container">
       <nav class="menu">
         <ul>
-          <li v-for="link in links">
-            <a :href="link.url">
-              {{ link.text }}
+          <li v-for="headerLink in headerLinks">
+            <a :href="headerLink.url">
+              {{ headerLink.text }}
             </a>
           </li>
         </ul>
@@ -44,9 +44,15 @@ export default {
 
       <div class="actions">
         <ul>
-          <li></li>
-          <li></li>
-          <li></li>
+          <li>
+            <font-awesome-icon :icon="['far', 'user']" />
+          </li>
+          <li>
+            <font-awesome-icon :icon="['far', 'heart']" />
+          </li>
+          <li>
+            <font-awesome-icon :icon="['fas', 'bag-shopping']" />
+          </li>
         </ul>
       </div>
     </div>
@@ -61,14 +67,9 @@ header {
   background-color: orange;
   color: white;
   padding: 10px;
+}
 
-  ul li {
-    display: inline-block;
-    padding: 0 5px;
-  }
-
-  .logo a img {
-    width: 200px;
-  }
+.logo a img {
+  width: 200px;
 }
 </style>
