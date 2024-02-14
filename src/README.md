@@ -26,7 +26,8 @@ npm create vite@latest .
 npm i --save-dev sass
 ```
 
-4. Crea il seguente scaffolding per i file scss:
+4. Esegui un controllo per verificare il corretto funzionamento
+5. Crea il seguente scaffolding per i file scss:
 
 ```plaintext
 src
@@ -40,8 +41,12 @@ src
 | | | \_variables.scss
 ```
 
-5. importa il file `general.scss` in `App.vue`. <br>
+6. importa il file `general.scss` in `App.vue`. <br>
    Dovrai usare la direttiva `@use` e il tag `<style>` non dovrà avere l'attributo `scoped`.
 
-6. importa i file parziali nel file `general.scss`. <br>
-   Dovrai usare la direttiva `@use` ed aggiungere `as *`
+7. importa i file parziali nel file `general.scss`. <br>
+   Dovrai usare la direttiva `@use` ed aggiungere `as \*
+
+## Messa a terra del progetto
+
+1. Iniziare ad impostare il codice dell'header`
