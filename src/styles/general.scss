@@ -1,5 +1,7 @@
 @use "./partials/variables" as *;
 @use "./partials/mixins" as *;
+// Import Bootstrap's CSS
+@import "bootstrap/scss/bootstrap";
 
 * {
   margin: 0;
@@ -34,4 +36,9 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+ul li {
+  display: inline-block;
+  padding-right: 10px;
 }
