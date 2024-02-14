@@ -1,8 +1,37 @@
 @use "./partials/variables" as *;
 @use "./partials/mixins" as *;
 
-header {
-  color: $header-text;
-  background-color: $header-background;
-  @include center();
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 1080px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+
+  &.hover {
+    cursor: pointer;
+  }
+}
+
+header,
+main,
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
