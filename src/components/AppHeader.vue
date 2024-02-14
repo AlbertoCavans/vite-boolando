@@ -27,6 +27,7 @@ export default {
 <template>
   <header>
     <div class="container">
+      <!-- MENU SX -->
       <nav class="menu">
         <ul>
           <li v-for="headerLink in headerLinks">
@@ -36,12 +37,15 @@ export default {
           </li>
         </ul>
       </nav>
-      <div class="logo">
+
+      <!-- LOGO -->
+      <div class="logo position-absolute">
         <a href="#">
           <img src="../assets/img/boolean-logo.png" alt="" />
         </a>
       </div>
 
+      <!-- ACTIONS DX -->
       <div class="actions">
         <ul>
           <li>
@@ -51,7 +55,8 @@ export default {
             <font-awesome-icon :icon="['far', 'heart']" />
           </li>
           <li>
-            <font-awesome-icon :icon="['fas', 'bag-shopping']" />
+            <font-awesome-icon :icon="['fab', 'square-instagram']" />
+            <!-- <font-awesome-icon :icon="['fas', 'bag-shopping']" /> -->
           </li>
         </ul>
       </div>
@@ -69,7 +74,10 @@ header {
   padding: 10px;
 }
 
-.logo a img {
-  width: 200px;
+.logo {
+  left: calc(50% - 100px);
+  a img {
+    width: 200px;
+  }
 }
 </style>
