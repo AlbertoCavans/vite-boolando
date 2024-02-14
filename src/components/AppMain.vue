@@ -1,4 +1,5 @@
 <script>
+import AppCard from "./AppCard.vue";
 export default {
   data() {
     return {
@@ -114,13 +115,15 @@ export default {
       return imageUrl.href;
     },
   },
+
+  components: { AppCard },
 };
 </script>
 
 <template>
   <main>
     <div class="container">
-      <div v-for="product in products" class="card border-0">
+      <!--       <div v-for="product in products" class="card border-0">
         <div class="box-img">
           <img
             class="img-card"
@@ -135,7 +138,14 @@ export default {
             {{ product.price }} <span>{{ product.price }}</span>
           </h6>
         </div>
-      </div>
+      </div> -->
+      <app-card
+        v-for="product in products"
+        :img="buildImagePath(product.frontImage)"
+        :brand="product.brand"
+        :productName="product.name"
+        :productPrice="product.price"
+      ></app-card>
     </div>
   </main>
 </template>
