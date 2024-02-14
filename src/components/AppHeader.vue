@@ -55,8 +55,7 @@ export default {
             <font-awesome-icon :icon="['far', 'heart']" />
           </li>
           <li>
-            <font-awesome-icon :icon="['fab', 'square-instagram']" />
-            <!-- <font-awesome-icon :icon="['fas', 'bag-shopping']" /> -->
+            <font-awesome-icon :icon="['fas', 'bag-shopping']" />
           </li>
         </ul>
       </div>
