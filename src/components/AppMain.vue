@@ -120,7 +120,7 @@ export default {
 <template>
   <main>
     <div class="container">
-      <div v-for="product in products" class="card">
+      <div v-for="product in products" class="card border-0">
         <div class="box-img">
           <img
             class="img-card"
@@ -129,11 +129,11 @@ export default {
           />
         </div>
         <div class="info-product">
-          <h5 class="product-brand">{{ product.brand }}</h5>
-          <h4 class="product-name">{{ product.name }}</h4>
-          <h5>
+          <h6 class="product-brand text-secondary">{{ product.brand }}</h6>
+          <h5 class="product-name">{{ product.name }}</h5>
+          <h6>
             {{ product.price }} <span>{{ product.price }}</span>
-          </h5>
+          </h6>
         </div>
       </div>
     </div>
@@ -148,8 +148,6 @@ main {
 .card {
   width: calc(100% / 3);
   padding: 10px;
-
-  border: 1px solid red;
 }
 
 .img-card {
