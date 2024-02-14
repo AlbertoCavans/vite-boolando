@@ -20,7 +20,7 @@ export default {
             },
           ],
         },
-        {
+        /*  {
           title: "Trovaci anche su",
           links: [
             {
@@ -36,7 +36,7 @@ export default {
               url: "#",
             },
           ],
-        },
+        }, */
       ],
     };
   },
@@ -55,7 +55,7 @@ export default {
         </ul>
       </div>
 
-      <!--       <div class="socials">
+      <div class="socials">
         <ul>
           <h5>Trovaci anche su</h5>
           <li><font-awesome-icon :icon="['fab', 'square-twitter']" /></li>
@@ -64,7 +64,7 @@ export default {
           <li><font-awesome-icon :icon="['fab', 'square-pinterest']" /></li>
           <li><font-awesome-icon :icon="['fab', 'square-youtube']" /></li>
         </ul>
-      </div> -->
+      </div>
     </div>
   </footer>
 </template>
