@@ -121,11 +121,20 @@ export default {
   <main>
     <div class="container">
       <div v-for="product in products" class="card">
-        <img
-          class="img-card"
-          :src="buildImagePath(product.frontImage)"
-          alt=""
-        />
+        <div class="box-img">
+          <img
+            class="img-card"
+            :src="buildImagePath(product.frontImage)"
+            alt=""
+          />
+        </div>
+        <div class="info-product">
+          <h5 class="product-brand">{{ product.brand }}</h5>
+          <h4 class="product-name">{{ product.name }}</h4>
+          <h5>
+            {{ product.price }} <span>{{ product.price }}</span>
+          </h5>
+        </div>
       </div>
     </div>
   </main>
@@ -139,8 +148,8 @@ main {
 .card {
   width: calc(100% / 3);
   padding: 10px;
-  background-color: gray;
-  border: 2px solid red;
+
+  border: 1px solid red;
 }
 
 .img-card {
