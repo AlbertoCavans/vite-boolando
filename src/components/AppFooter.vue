@@ -47,7 +47,7 @@ export default {
   <footer>
     <div class="container">
       <div v-for="footerOption in footerOptions">
-        <h4>{{ footerOption.title }}</h4>
+        <h5>{{ footerOption.title }}</h5>
         <ul>
           <li v-for="link in footerOption.links">
             <a :href="link.url">{{ link.name }}</a>
@@ -55,22 +55,14 @@ export default {
         </ul>
       </div>
 
-      <!--       <div class="legal-section">
+      <!--       <div class="socials">
         <ul>
-          Boolando s.r.l.
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-      </div>
-      <div class="socials">
-        <ul>
-          Trovaci anche su
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
+          <h5>Trovaci anche su</h5>
+          <li><font-awesome-icon :icon="['fab', 'square-twitter']" /></li>
+          <li><font-awesome-icon :icon="['fab', 'square-facebook']" /></li>
+          <li><font-awesome-icon :icon="['fab', 'square-instagram']" /></li>
+          <li><font-awesome-icon :icon="['fab', 'square-pinterest']" /></li>
+          <li><font-awesome-icon :icon="['fab', 'square-youtube']" /></li>
         </ul>
       </div> -->
     </div>
