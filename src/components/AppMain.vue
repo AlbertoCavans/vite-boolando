@@ -1,9 +1,10 @@
 <script>
+import axios from "axios";
 import AppCard from "./AppCard.vue";
 export default {
   data() {
     return {
-      products: [
+      /*       products: [
         {
           id: 1,
           frontImage: "1.webp",
@@ -106,7 +107,9 @@ export default {
             },
           ],
         },
-      ],
+      ], */
+
+      products: [],
     };
   },
   methods: {
@@ -117,6 +120,14 @@ export default {
   },
 
   components: { AppCard },
+
+  created() {
+    axios.get("http://localhost:3000/products").then((res) => {
+      /* console.log(res.data); */
+
+      this.products = res.data;
+    });
+  },
 };
 </script>
 
