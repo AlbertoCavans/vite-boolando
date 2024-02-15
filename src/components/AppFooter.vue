@@ -1,44 +1,8 @@
 <script>
 export default {
-  data() {
-    return {
-      footerOptions: [
-        {
-          title: "Boolando s.r.l.",
-          links: [
-            {
-              name: "Informazioni legali",
-              url: "#",
-            },
-            {
-              name: "Informazioni sulla privacy",
-              url: "#",
-            },
-            {
-              name: "Diritto di recesso",
-              url: "#",
-            },
-          ],
-        },
-        /*  {
-          title: "Trovaci anche su",
-          links: [
-            {
-              name: "Icon 1",
-              url: "#",
-            },
-            {
-              name: "Icon 2",
-              url: "#",
-            },
-            {
-              name: "Icon 3",
-              url: "#",
-            },
-          ],
-        }, */
-      ],
-    };
+  props: {
+    footerOptions: Array,
+    socialLinks: Array,
   },
 };
 </script>
@@ -55,6 +19,19 @@ export default {
         </ul>
       </div>
 
+      <!-- SISTEMARE QUESTA PARTE PER USARE FONTAWESOME -->
+      <!--       <div class="socials">
+        <ul>
+          <h5>Trovaci anche su</h5>
+          <li>
+            <font-awesome-icon
+              v-for="socialLink in socialLinks"
+              :href="socialLink.url"
+              :icon="socialLink.name"
+            />
+          </li>
+        </ul>
+      </div> -->
       <div class="socials">
         <ul>
           <h5>Trovaci anche su</h5>
