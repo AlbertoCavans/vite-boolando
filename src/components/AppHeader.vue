@@ -1,26 +1,6 @@
 <script>
 export default {
-  data() {
-    return {
-      headerLinks: [
-        {
-          text: "Uomo",
-          url: "#",
-          current: false,
-        },
-        {
-          text: "Donna",
-          url: "#",
-          current: false,
-        },
-        {
-          text: "Bambino",
-          url: "#",
-          current: false,
-        },
-      ],
-    };
-  },
+  props: { headerLinks: Array },
 };
 </script>
 
