@@ -10,7 +10,7 @@ export default {
 </script>
 
 <template>
-  <div class="card">
+  <div class="card border-0">
     <img :src="img" :alt="productName" />
 
     <div class="info-product">
