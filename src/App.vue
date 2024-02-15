@@ -7,6 +7,65 @@ export default {
   data() {
     return {
       title: "Boolando",
+      headerLinks: [
+        {
+          text: "Uomo",
+          url: "#",
+          current: false,
+        },
+        {
+          text: "Donna",
+          url: "#",
+          current: false,
+        },
+        {
+          text: "Bambino",
+          url: "#",
+          current: false,
+        },
+      ],
+
+      footerOptions: [
+        {
+          title: "Boolando s.r.l.",
+          links: [
+            {
+              name: "Informazioni legali",
+              url: "#",
+            },
+            {
+              name: "Informazioni sulla privacy",
+              url: "#",
+            },
+            {
+              name: "Diritto di recesso",
+              url: "#",
+            },
+          ],
+        },
+      ],
+      socialLinks: [
+        {
+          name: "['fab', 'square-twitter']",
+          url: "#",
+        },
+        {
+          name: "['fab', 'square-facebook']",
+          url: "#",
+        },
+        {
+          name: "['fab', 'square-instagram']",
+          url: "#",
+        },
+        {
+          name: "['fab', 'square-pinterest']",
+          url: "#",
+        },
+        {
+          name: "['fab', 'square-youtube']",
+          url: "#",
+        },
+      ],
     };
   },
 
@@ -15,11 +74,14 @@ export default {
 </script>
 
 <template>
-  <AppHeader></AppHeader>
+  <AppHeader :headerLinks="headerLinks"></AppHeader>
 
   <AppMain></AppMain>
 
-  <AppFooter></AppFooter>
+  <AppFooter
+    :footerOptions="footerOptions"
+    :socialLinks="socialLinks"
+  ></AppFooter>
 </template>
 
 <style lang="scss">
