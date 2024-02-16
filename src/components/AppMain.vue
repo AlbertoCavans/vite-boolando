@@ -119,9 +119,9 @@ export default {
     handleActivationModal(productid) {
       store.modal.show = true;
       /* alert("card con id " + productid); */
-      console.log(this.products[productid]);
+      console.log(this.products[productid - 1]);
 
-      const productName = this.products[productid];
+      const productName = this.products[productid - 1];
 
       if (productName) {
         store.modal.name = productName.name;
