@@ -22,7 +22,9 @@ export default {
         @click="cancelModal()"
         icon="fa-solid fa-rectangle-xmark"
       />
-      <h2>Prodotto</h2>
+      <h3>Prodotto: {{ store.modal.name }}</h3>
+      <h4>Brand: {{ store.modal.brand }}</h4>
+      <h5>Prezzo {{ store.modal.price }}</h5>
     </div>
   </div>
 </template>
