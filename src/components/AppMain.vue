@@ -116,6 +116,19 @@ export default {
     };
   },
   methods: {
+    handleActivationModal(productid) {
+      store.modal.show = true;
+      /* alert("card con id " + productid); */
+      console.log(this.products[productid]);
+
+      const productName = this.products[productid];
+
+      if (productName) {
+        store.modal.name = productName.name;
+        store.modal.brand = productName.brand;
+        store.modal.price = productName.price;
+      }
+    },
     buildImagePath(imageName) {
       const imageUrl = new URL("../assets/img/" + imageName, import.meta.url);
       return imageUrl.href;
@@ -166,10 +179,12 @@ export default {
       </div> -->
       <app-card
         v-for="product in products"
+        @modal-active="handleActivationModal"
         :img="buildImagePath(product.frontImage)"
         :brand="product.brand"
         :productName="product.name"
         :productPrice="product.price"
+        :id="product.id"
       ></app-card>
       <app-modal v-if="store.modal.show"> </app-modal>
     </div>
