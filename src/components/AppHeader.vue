@@ -1,5 +1,12 @@
 <script>
+import { store } from "../store/index";
 export default {
+  data() {
+    return {
+      store: store,
+    };
+  },
+
   props: { headerLinks: Array },
 };
 </script>
@@ -19,10 +26,11 @@ export default {
       </nav>
 
       <!-- LOGO -->
-      <div class="logo position-absolute">
+      <div class="logo position-absolute d-flex flex-column align-items-center">
         <a href="#">
           <img src="../assets/img/boolean-logo.png" alt="" />
         </a>
+        <h5>{{ store.test }}</h5>
       </div>
 
       <!-- ACTIONS DX -->
@@ -51,6 +59,7 @@ header {
   background-color: orange;
   color: white;
   padding: 10px;
+  height: 90px;
 }
 
 .logo {
