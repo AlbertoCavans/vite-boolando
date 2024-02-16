@@ -2,6 +2,7 @@
 import { store } from "../store/index";
 import axios from "axios";
 import AppCard from "./AppCard.vue";
+import AppModal from "./AppModal.vue";
 export default {
   data() {
     return {
@@ -136,7 +137,7 @@ export default {
     },
   },
 
-  components: { AppCard },
+  components: { AppCard, AppModal },
 
   created() {
     this.fetchProducts();
@@ -170,6 +171,7 @@ export default {
         :productName="product.name"
         :productPrice="product.price"
       ></app-card>
+      <app-modal v-if="store.modal.show"> </app-modal>
     </div>
   </main>
 </template>
