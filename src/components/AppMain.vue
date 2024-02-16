@@ -119,16 +119,27 @@ export default {
       const imageUrl = new URL("../assets/img/" + imageName, import.meta.url);
       return imageUrl.href;
     },
+
+    fetchProducts() {
+      axios
+        .get(`${store.urlAPI}/products`)
+        .then((res) => {
+          /* console.log(res.data); */
+
+          this.products = res.data;
+        })
+        .catch((error) => {
+          store.alert.message = error.message;
+          store.alert.show = true;
+          store.alert.type = "danger";
+        });
+    },
   },
 
   components: { AppCard },
 
   created() {
-    axios.get(`${store.urlAPI}/products`).then((res) => {
-      /* console.log(res.data); */
-
-      this.products = res.data;
-    });
+    this.fetchProducts();
   },
 };
 </script>
