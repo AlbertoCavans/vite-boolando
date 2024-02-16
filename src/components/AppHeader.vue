@@ -8,6 +8,10 @@ export default {
   },
 
   props: { headerLinks: Array },
+
+  created() {
+    store.test = "Slogan Boolando";
+  },
 };
 </script>
 
