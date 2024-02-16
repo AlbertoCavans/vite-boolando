@@ -1,4 +1,5 @@
 <script>
+import { store } from "./store/index.js";
 import AppHeader from "./components/AppHeader.vue";
 import AppMain from "./components/AppMain.vue";
 import AppFooter from "./components/AppFooter.vue";
@@ -6,6 +7,7 @@ import AppFooter from "./components/AppFooter.vue";
 export default {
   data() {
     return {
+      store: store,
       title: "Boolando",
       headerLinks: [
         {
@@ -75,6 +77,8 @@ export default {
 
 <template>
   <AppHeader :headerLinks="headerLinks"></AppHeader>
+
+  <app-alert v-if="store.alert.show"></app-alert>
 
   <AppMain></AppMain>
 
