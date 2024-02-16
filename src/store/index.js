@@ -14,6 +14,9 @@ export const store = reactive({
   },
 
   modal: {
-    show: true,
+    show: false,
+    name: "",
+    brand: "",
+    price: "",
   },
 });
