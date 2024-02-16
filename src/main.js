@@ -1,6 +1,7 @@
 import { createApp } from "vue";
 
 import App from "./App.vue";
+import AppAlert from "./components/AppAlert.vue";
 
 import * as bootstrap from "bootstrap";
 
@@ -14,6 +15,7 @@ import { faSquareTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faSquareFacebook } from "@fortawesome/free-brands-svg-icons";
 import { faSquarePinterest } from "@fortawesome/free-brands-svg-icons";
 import { faSquareYoutube } from "@fortawesome/free-brands-svg-icons";
+import { faRectangleXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 library.add(faPhone);
@@ -25,5 +27,9 @@ library.add(faSquareTwitter);
 library.add(faSquareFacebook);
 library.add(faSquarePinterest);
 library.add(faSquareYoutube);
+library.add(faRectangleXmark);
 
-createApp(App).component("font-awesome-icon", FontAwesomeIcon).mount("#app");
+const app = createApp(App);
+app.component("font-awesome-icon", FontAwesomeIcon);
+app.component("app-alert", AppAlert);
+app.mount("#app");
