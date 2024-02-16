@@ -1,16 +1,19 @@
 <script>
 export default {
   props: {
+    id: Number,
     img: String,
     brand: String,
     productName: String,
     productPrice: Number,
   },
+
+  emits: ["modal-active"],
 };
 </script>
 
 <template>
-  <div class="card border-0">
+  <div class="card border-0" @click="$emit('modal-active', this.id)">
     <img :src="img" :alt="productName" />
 
     <div class="info-product">
