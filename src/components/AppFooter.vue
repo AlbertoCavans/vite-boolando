@@ -1,5 +1,12 @@
 <script>
+import { store } from "../store/index";
 export default {
+  data() {
+    return {
+      store: store,
+    };
+  },
+
   props: {
     footerOptions: Array,
     socialLinks: Array,
@@ -17,6 +24,13 @@ export default {
             <a :href="link.url">{{ link.name }}</a>
           </li>
         </ul>
+      </div>
+
+      <div class="logo position-absolute d-flex flex-column align-items-center">
+        <a href="#">
+          <img src="../assets/img/boolean-logo.png" alt="" />
+        </a>
+        <h5>{{ store.test }}</h5>
       </div>
 
       <!-- SISTEMARE QUESTA PARTE PER USARE FONTAWESOME -->
@@ -51,5 +65,12 @@ footer {
   background-color: #1a1a1a;
   padding: 20px 0;
   color: white;
+}
+
+.logo {
+  left: calc(50% - 10px);
+  a img {
+    width: 200px;
+  }
 }
 </style>
