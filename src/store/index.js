@@ -12,4 +12,8 @@ export const store = reactive({
     type: "",
     icon: "fa-rectangle-xmark",
   },
+
+  modal: {
+    show: true,
+  },
 });
